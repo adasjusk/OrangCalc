@@ -11,7 +11,7 @@ class OrangCalc(ctk.CTk):
         self.entry = ctk.CTkEntry(self, font=("Arial", 20), width=280, justify="right")
         self.entry.grid(row=0, column=0, columnspan=4, pady=10, padx=10)
         self.buttons = [
-            ["CE", "C", "⌫", "/"],
+            ["CE", "C", "⌫", ":"],
             ["7", "8", "9", "*"],
             ["4", "5", "6", "-"],
             ["1", "2", "3", "+"],
@@ -23,7 +23,7 @@ class OrangCalc(ctk.CTk):
                     button = ctk.CTkButton(
                         self, text=button_text, command=self.calculate,
                         font=("Arial", 18), fg_color="orange", text_color="black",
-                        width=70, height=50, hover_color="#FF8C00"
+                        width=70, height=50, hover_color="2"
                     )
                 elif button_text == "i":
                     button = ctk.CTkButton(
@@ -63,7 +63,7 @@ class OrangCalc(ctk.CTk):
             self.entry.insert(0, "Error")
     def show_info(self):
         info_window = ctk.CTkToplevel(self)
-        info_window.title("About OrangCalc")
+        info_window.title("About The OrangCalc")
         info_window.geometry("300x220")
         info_window.iconbitmap("orange.ico")
         info_window.attributes("-topmost", True)
