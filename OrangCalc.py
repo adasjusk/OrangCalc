@@ -1,9 +1,8 @@
 import customtkinter as ctk
-
 class OrangCalc(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("OrangCalc")
+        self.title("OrangCalculator")
         self.geometry("300x400")
         ctk.set_appearance_mode("Dark")
         self.theme_var = ctk.StringVar(value="Dark")
